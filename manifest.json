@@ -13,9 +13,6 @@
     "chrome_url_overrides": {
         "newtab": "main.html"
     },
-    "chrome_settings_overrides" : {
-        "homepage": "main.html" 
-    },      
     "browser_specific_settings": {
         "gecko": {
             "id": "k4514793@gmail.com"
