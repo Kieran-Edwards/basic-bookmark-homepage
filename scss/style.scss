@@ -1,0 +1,113 @@
+$color-1: #F1F3F4;
+$color-2: #737373;
+$color-3: #FFFFFF;
+$color-4: #a2a2a2;
+
+$color-overlay-1: rgba(0, 0, 0, 0.2);
+$color-overlay-2: rgba(0, 0, 0, 0.1);
+$color-overlay-3: rgba(0, 0, 0, .02);
+
+$font-family_1: 'Roboto', sans-serif;
+
+$spacing: 16px;
+
+$box-shadow: 0 4px 10px -2px $color-overlay-1;
+
+@media (prefers-color-scheme: dark) {
+	$color-1: black;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("/font/Roboto-Regular.ttf");
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-size: 12px;
+}
+
+body {
+	font-family: $font-family_1;
+	line-height: 1.6;
+	letter-spacing: 0.7px;
+	font-weight: 500;
+	white-space: nowrap;
+	text-decoration: none;
+	color: $color-2;
+	background-color: $color-1;
+}
+
+header, main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.clock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: $spacing*3 0 $spacing*2;
+
+	&__time, &__date {
+		font-size: 7rem;
+		color: $color-2;
+		line-height: 1.2;
+		margin: 0;
+	}
+
+	&__date {
+		font-size: 2rem;
+	}
+}
+
+.bookmarks-card {
+	box-shadow: $box-shadow;
+	border-radius: 8px;
+	overflow: hidden;
+	background-color: $color-3;
+	width: 80%;
+	max-width: 1000px;
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	color: $color-2;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $color-overlay-2;
+	}
+
+	&__icon {
+		width: $spacing;
+		height: $spacing;
+		display: flex;
+		justify-content: center;
+		padding: $spacing;
+	}
+
+	&__title {
+		padding-right: $spacing;
+  		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__url {
+		font-size: 0.8em;
+		color: $color-4;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__exploded {
+		background-color: $color-overlay-3;
+		box-shadow: inset 0px 8px 8px -12px $color-2, inset 0px -8px 8px -12px $color-2;
+	}
+}
