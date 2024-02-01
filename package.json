@@ -1,0 +1,22 @@
+{
+  "name": "basicbookmarkhomepage",
+  "version": "1.0.0",
+  "description": "A Basic Bookmark Homepage",
+  "main": "script/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Kieran-Edwards/basic-bookmark-homepage.git"
+  },
+  "author": "Kieran-Edwards",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kieran-Edwards/basic-bookmark-homepage/issues"
+  },
+  "homepage": "https://github.com/Kieran-Edwards/basic-bookmark-homepage#readme",
+  "dependencies": {
+    "sass": "^1.70.0"
+  }
+}
