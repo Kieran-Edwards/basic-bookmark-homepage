@@ -1,14 +1,25 @@
 {
     "name": "Basic Bookmark Homepage",
-    "version": "2",
+    "version": "3",
     "description": "A Basic Bookmark Homepage",
     "manifest_version": 3,
     "permissions": [
         "bookmarks",
         "storage"
     ],
+    "icons": {
+        "16": "assets/icon16.png",
+        "32": "assets/icon32.png",
+        "48": "assets/icon48.png",
+        "128": "assets/icon128.png"
+    },
     "action": {
-        "default_icon": "assets/icon.svg"
+        "default_icon": {
+            "16": "assets/icon16.png",
+            "32": "assets/icon32.png",
+            "48": "assets/icon48.png",
+            "128": "assets/icon128.png"
+        }
     },
     "chrome_url_overrides": {
         "newtab": "main.html"
