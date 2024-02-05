@@ -1,6 +1,6 @@
 {
     "name": "Basic Bookmark Homepage",
-    "version": "1",
+    "version": "2",
     "description": "A Basic Bookmark Homepage",
     "manifest_version": 3,
     "permissions": [
@@ -13,9 +13,6 @@
     "chrome_url_overrides": {
         "newtab": "main.html"
     },
-    "chrome_settings_overrides" : {
-        "homepage": "main.html" 
-    },      
     "browser_specific_settings": {
         "gecko": {
             "id": "k4514793@gmail.com"
