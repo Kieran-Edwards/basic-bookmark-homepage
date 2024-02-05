@@ -85,4 +85,30 @@ header, main {
   box-shadow: inset 0px 8px 8px -12px #737373, inset 0px -8px 8px -12px #737373;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #B0B0B0;
+    background-color: #2C2E2F;
+  }
+  .clock__time, .clock__date {
+    color: #B0B0B0;
+  }
+  .bookmarks-card {
+    background-color: #1A1A1A;
+  }
+  .item {
+    color: #B0B0B0;
+  }
+  .item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .item__url {
+    color: #737373;
+  }
+  .item__exploded {
+    background-color: rgba(255, 255, 255, 0.02);
+    box-shadow: inset 0px 8px 8px -12px #454545, inset 0px -8px 8px -12px #454545;
+  }
+}
+
 /*# sourceMappingURL=master.css.map */

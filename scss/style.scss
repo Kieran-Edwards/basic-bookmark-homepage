@@ -13,10 +13,6 @@ $spacing: 16px;
 
 $box-shadow: 0 4px 10px -2px $color-overlay-1;
 
-@media (prefers-color-scheme: dark) {
-	$color-1: black;
-}
-
 @font-face {
 	font-family: "Roboto";
 	src: url("/font/Roboto-Regular.ttf");
@@ -109,5 +105,50 @@ header, main {
 	&__exploded {
 		background-color: $color-overlay-3;
 		box-shadow: inset 0px 8px 8px -12px $color-2, inset 0px -8px 8px -12px $color-2;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	$color-1: #2C2E2F;
+	$color-2: #B0B0B0;
+	$color-3: #1A1A1A;
+	$color-4: #737373;
+	
+	$color-overlay-1: rgba(255, 255, 255, 0.2);
+	$color-overlay-2: rgba(255, 255, 255, 0.1);
+	$color-overlay-3: rgba(255, 255, 255, .02);
+
+	$box-shadow: #454545;	
+
+	body { 
+		color: $color-2;
+		background-color: $color-1;
+	}
+
+	.clock {
+		&__time, &__date {
+			color: $color-2;
+		}
+	}
+
+	.bookmarks-card {
+		background-color: $color-3;
+	}
+
+	.item {
+		color: $color-2;
+
+		&:hover {
+			background-color: $color-overlay-2;
+		}
+
+		&__url {
+			color: $color-4;
+		}
+
+		&__exploded {
+			background-color: $color-overlay-3;
+			box-shadow: inset 0px 8px 8px -12px $box-shadow, inset 0px -8px 8px -12px $box-shadow;
+		}
 	}
 }
