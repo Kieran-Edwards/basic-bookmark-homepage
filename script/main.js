@@ -1,6 +1,15 @@
 
-const createBookmarks = (items) => {
-    document.querySelector(".bookmarks-card").innerHTML = generateBookmarkItem(items[0].children);
+const createBookmarks = (tree) => {
+    const rootFolders = tree[0].children;
+    let allItems = [];
+    
+    rootFolders.forEach(folder => {
+        if (folder.children) {
+            allItems = allItems.concat(folder.children);
+        }
+    });
+    
+    document.querySelector(".bookmarks-card").innerHTML = generateBookmarkItem(allItems);
 
     document.querySelectorAll('.js-item-folder').forEach(folder => {
         folder.addEventListener('click', () => {
