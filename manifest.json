@@ -1,6 +1,6 @@
 {
     "name": "Basic Bookmark Homepage",
-    "version": "3",
+    "version": "4.0.0",
     "description": "A Basic Bookmark Homepage",
     "manifest_version": 3,
     "permissions": [
