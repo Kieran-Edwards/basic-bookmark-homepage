@@ -1,3 +1,4 @@
+
 const createBookmarks = (items) => {
     document.querySelector(".bookmarks-card").innerHTML = generateBookmarkItem(items[0].children);
 
@@ -13,11 +14,8 @@ const createBookmarks = (items) => {
     });
 };
 
-const browserAPI = typeof browser === 'undefined' ? chrome : browser;
-const subTree = typeof browser === 'undefined' ? '1' : 'toolbar_____';
-
-browserAPI.storage.sync.get('options', () =>
-    browserAPI.bookmarks.getSubTree(subTree, items =>
+browser.storage.sync.get('options', () =>
+    browser.bookmarks.getTree(items =>
         createBookmarks(items)
     )
 );
